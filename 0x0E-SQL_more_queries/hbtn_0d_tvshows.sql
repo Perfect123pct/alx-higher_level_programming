@@ -1,5 +1,3 @@
-hbtn_0d_tvshows.sql
-
 -- MySQL dump 10.13  Distrib 5.7.8-rc, for Linux (x86_64)
 --
 -- Host: localhost    Database: hbtn_0d_tvshows
@@ -101,4 +99,4 @@ UNLOCK TABLES;
 /*!40101 SETs *COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SETs *SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-26 20:57:02
+-- Dump completed on 2023-08-16 20:27:02
