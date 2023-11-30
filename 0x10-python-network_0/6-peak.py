@@ -1,0 +1,31 @@
+def find_peak(list_of_integers):
+    """
+    Find a peak in a list of unsorted integers.
+
+    Args:
+    - list_of_integers: List of unsorted integers.
+
+    Returns:
+    - Peak integer.
+
+    Complexity: O(log(n))
+    """
+    return find_peak_recursive(list_of_integers, 0, len(list_of_integers) - 1)
+
+def find_peak_recursive(arr, low, high):
+    if low == high:
+        return arr[low]
+
+    mid = (low + high) // 2
+
+    if arr[mid] > arr[mid + 1]:
+        # If the mid element is greater than its right neighbor, a peak must be on the left side
+        return find_peak_recursive(arr, low, mid)
+    else:
+        # If the mid element is less than or equal to its right neighbor, a peak must be on the right side
+        return find_peak_recursive(arr, mid + 1, high)
+
+# Example usage:
+# test_list = [1, 3, 20, 4, 1, 0]
+# peak = find_peak(test_list)
+# print(f"The peak element is: {peak}")
